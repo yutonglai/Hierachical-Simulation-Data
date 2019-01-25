@@ -1,19 +1,18 @@
 # Hierachical-Simulation-Data
 The data will be simulated from a hirachical model. Start with the Bernoulli Distribution, when delta=0, use the ZINB Distribution; when delta=1, use the Poisson Distribution. The mean of the Poisson Distribution will subject to a Uniform Distribution
 
-### pre-set parameters determined by the real data analysis, the parameters from real data are saved in the variable RealData
-### ZINB Data driven parameter initialization
+pre-set parameters determined by the real data analysis, the parameters from real data are saved in the variable RealData
+ZINB Data driven parameter initialization
 	p_m = RealData$p0
 	p   = RealData$p
 	scale_m0 = (1-p)/p
 	shape_m0 = RealData$r
-### Data driven NULL proportion for different distance	
+Data driven NULL proportion for different distance	
 	pi_m = (RealData$pi0)*0.95				
-### number of bins####
+number of bins
 	nbin = 2000
 	simulation_times = 20 #20
-### Threshold on distance for FitHiC####
-	D = length(RealData$X) # maximum distance
+Threshold on distance for FitHiC
 	distUpThres  = D
 	distLowThres = 0
 
