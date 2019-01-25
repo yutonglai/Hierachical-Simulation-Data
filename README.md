@@ -4,21 +4,21 @@ The data will be simulated from a hirachical model. Start with the Bernoulli Dis
 ### pre-set parameters determined by the real data analysis, 
 ### the parameters from real data are saved in the variable RealData
 ## Data driven parameter initialization
-D = length(RealData$X) # maximum distance
+	D = length(RealData$X) # maximum distance
  
 ## ZINB Data driven parameter initialization
-p_m  	   = RealData$p0
-p        = RealData$p
-scale_m0 = (1-p)/p
-shape_m0 = RealData$r
+	p_m = RealData$p0
+	p   = RealData$p
+	scale_m0 = (1-p)/p
+	shape_m0 = RealData$r
 ## Data driven NULL proportion for different distance	
-pi_m = (RealData$pi0)*0.95				
+	pi_m = (RealData$pi0)*0.95				
 #### number of bins####
-nbin = 2000
-simulation_times = 20 #20
+	nbin = 2000
+	simulation_times = 20 #20
 #### Threshold on distance for FitHiC####
-distUpThres  = D
-distLowThres = 0
+	distUpThres  = D
+	distLowThres = 0
 
 ### simulate data
 k = 1
